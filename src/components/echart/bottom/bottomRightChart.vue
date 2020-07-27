@@ -6,7 +6,7 @@
 
 <script>
 import echartMixins from "@/utils/resizeMixins";
-const echarts = require("echarts");
+
 export default {
   data() {
     return {
@@ -26,7 +26,7 @@ export default {
     },
     draw() {
       // 基于准备好的dom，初始化echarts实例
-      this.chart = echarts.init(document.getElementById("bottomRightChart"));
+      this.chart = this.$echarts.init(document.getElementById("bottomRightChart"));
       //  ----------------------------------------------------------------
       // 数据
       let dateBase = new Date();

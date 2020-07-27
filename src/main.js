@@ -22,6 +22,11 @@ import '@/common/flexible.js';
 // 引入全局css
 import './assets/scss/style.scss';
 
+
+//引入echart
+import echarts from 'echarts'
+Vue.prototype.$echarts = echarts
+
 Vue.config.productionTip = false;
 
 new Vue({

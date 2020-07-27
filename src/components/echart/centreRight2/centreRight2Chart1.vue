@@ -6,7 +6,7 @@
 
 <script>
 import echartMixins from "@/utils/resizeMixins";
-const echarts = require("echarts");
+
 export default {
   data() {
     return {
@@ -20,7 +20,7 @@ export default {
   methods: {
     draw() {
       // 基于准备好的dom，初始化echarts实例
-      this.chart = echarts.init(document.getElementById("centreRight2Chart1"));
+      this.chart = this.$echarts.init(document.getElementById("centreRight2Chart1"));
       //  ----------------------------------------------------------------
       let dataBJ = [
         [94, 69, 114, 2.08, 73, 39, 22],

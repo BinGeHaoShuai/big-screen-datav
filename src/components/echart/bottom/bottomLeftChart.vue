@@ -6,7 +6,6 @@
 
 <script>
 import echartMixins from "@/utils/resizeMixins";
-const echarts = require("echarts");
 export default {
   data() {
     return {
@@ -20,7 +19,7 @@ export default {
   methods: {
     draw() {
       // 基于准备好的dom，初始化echarts实例
-      this.chart = echarts.init(document.getElementById("bottomLeftChart"));
+      this.chart = this.$echarts.init(document.getElementById("bottomLeftChart"));
       //  ----------------------------------------------------------------
       let category = [
         "市区",
@@ -227,7 +226,7 @@ export default {
             itemStyle: {
               normal: {
                 barBorderRadius: 5,
-                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                color: new this.$echarts.graphic.LinearGradient(0, 0, 0, 1, [
                   { offset: 0, color: "#956FD4" },
                   { offset: 1, color: "#3EACE5" }
                 ])
@@ -244,7 +243,7 @@ export default {
             itemStyle: {
               normal: {
                 barBorderRadius: 5,
-                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                color: new this.$echarts.graphic.LinearGradient(0, 0, 0, 1, [
                   { offset: 0, color: "rgba(156,107,211,0.8)" },
                   { offset: 0.2, color: "rgba(156,107,211,0.5)" },
                   { offset: 1, color: "rgba(156,107,211,0.2)" }
