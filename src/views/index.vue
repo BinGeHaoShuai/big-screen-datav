@@ -48,7 +48,7 @@
               style="width: 6.25rem; background-color: #0f1325; text-align: right;"
             >
               <span class="react-after"></span>
-              <span class="text">2020年03月16日 周一 12:00</span>
+              <span class="text">{{dateYear}} {{dateWeek}} {{dateDay}}</span>
             </div>
           </div>
         </div>
@@ -97,6 +97,7 @@
 </template>
 
 <script>
+import { formatTime } from '../utils/index.js'
 import centerLeft1 from "./centerLeft1";
 import centerLeft2 from "./centerLeft2";
 import centerRight1 from "./centerRight1";
@@ -105,9 +106,13 @@ import center from "./center";
 import bottomLeft from "./bottomLeft";
 import bottomRight from "./bottomRight";
 export default {
-  data() {
+  data () {
     return {
-      loading: true
+      loading: true,
+      dateDay: null,
+      dateYear: null,
+      dateWeek: null,
+      weekday: ["周日", "周一", "周二", "周三", "周四", "周五", "周六"],
     };
   },
   components: {
@@ -119,11 +124,19 @@ export default {
     bottomLeft,
     bottomRight
   },
-  mounted() {
+  mounted () {
+    this.timeFn();
     this.cancelLoading();
   },
   methods: {
-    cancelLoading() {
+    timeFn () {
+      setInterval(() => {
+        this.dateDay = formatTime(new Date(), 'HH: mm: ss');
+        this.dateYear = formatTime(new Date(), 'yyyy-MM-dd');
+        this.dateWeek = this.weekday[new Date().getDay()];
+      }, 1000)
+    },
+    cancelLoading () {
       setTimeout(() => {
         this.loading = false;
       }, 500);
@@ -133,5 +146,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../assets/scss/index.scss";
+@import '../assets/scss/index.scss';
 </style>

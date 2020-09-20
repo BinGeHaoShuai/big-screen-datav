@@ -37,7 +37,7 @@
 import centerChart from "@/components/echart/center/centerChartRate";
 
 export default {
-  data() {
+  data () {
     return {
       titleItem: [
         {
@@ -112,20 +112,27 @@ export default {
             value: 80
           },
           {
-            name: "新乡",
+            name: "新乡2",
             value: 80
           },
           {
-            name: "新乡",
+            name: "新乡3",
             value: 80
           },
           {
-            name: "新乡",
+            name: "新乡4",
             value: 80
-          }
+          },
+          {
+            name: "新乡5",
+            value: 80
+          },
+          {
+            name: "新乡6",
+            value: 80
+          },
         ],
-        waitTime: 4000,
-        carousel: "page",
+        carousel: "single",
         unit: "份"
       },
       water: {
