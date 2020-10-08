@@ -67,9 +67,9 @@ export default {
   },
   methods: {
 	async fetchList(){
-	  const { code,listData }= await this.$http.get("xx/xx/xx"x);
+	  const { code, listData } = await this.$http.get("xx/xx/xx");
 	  if(code === 200){
-		 this.ListDataSelf= listData;
+		 this.ListDataSelf = listData;
 	  }
 	}
   }

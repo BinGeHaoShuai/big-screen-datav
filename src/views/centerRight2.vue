@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import centreRight2Chart1 from "@/components/echart/centerRight2/centerRight2Chart";
+import centreRight2Chart1 from "@/components/echart/centerRight/centerRight2Chart";
 
 export default {
   data() {
