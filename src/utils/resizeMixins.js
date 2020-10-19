@@ -12,6 +12,12 @@ export default {
   created() {
     window.addEventListener('resize', this[resizeChartMethod], false);
   },
+  activated() {
+    // 防止keep-alive之后图表变形
+    if (this.chart) {
+      this.chart.resize()
+    }
+  },
   beforeDestroy() {
     window.removeEventListener('reisze', this[resizeChartMethod]);
   },
