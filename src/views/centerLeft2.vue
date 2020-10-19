@@ -11,20 +11,20 @@
         </div>
       </div>
       <div class="d-flex jc-center">
-        <centreLeft2Chart />
+        <CentreLeft2Chart />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import centreLeft2Chart from "@/components/echart/centerLeft2/centreLeft2Chart";
+import CentreLeft2Chart from "@/components/echart/centerLeft/centreLeft2Chart";
 export default {
   data() {
     return {};
   },
   components: {
-    centreLeft2Chart
+    CentreLeft2Chart
   },
   mounted() {},
   methods: {}

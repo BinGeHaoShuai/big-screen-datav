@@ -1,5 +1,6 @@
 ## 一、项目描述
 
+- [**React 版本请点击这里查看，全新界面超级好看！！！(o ﾟ v ﾟ)ノ**](https://gitee.com/MTrun/react-big-screen)
 - 一个基于 vue、datav、Echart 框架的 " **数据大屏项目** "，通过 vue 组件实现数据动态刷新渲染，内部图表可实现自由替换。部分图表使用 DataV 自带组件，可进行更改，详情请点击下方 DataV 文档。
 - 项目需要全屏展示（按 F11）。
 - 项目部分区域使用了全局注册方式，增加了打包体积，在实际运用中请使用**按需引入**。
@@ -9,9 +10,9 @@
 
 友情链接：
 
-1.  [DataV 官方文档（建议使用之前先浏览）](http://datav.jiaminghi.com/guide/)
-2.  [echarts 实例](https://www.echartsjs.com/examples/zh/index.html)，[echarts 官方文档](https://www.echartsjs.com/zh/option.html#title)
-3.  [Vue 官方文档](https://cn.vuejs.org/v2/guide/instance.html)
+1.  [Vue 官方文档](https://cn.vuejs.org/v2/guide/instance.html)
+2.  [DataV 官方文档](http://datav.jiaminghi.com/guide/)
+3.  [echarts 实例](https://echarts.apache.org/examples/zh/index.html)，[echarts API文档](https://echarts.apache.org/zh/api.html#echarts)
 4.  [项目 gitee 地址（国内速度快）](https://gitee.com/MTrun/big-screen-vue-datav)
 
 项目展示
@@ -33,11 +34,11 @@
 
 ## 三、使用介绍
 
-1. **如何启动项目**
+### 启动项目
 
-   需要提前安装好`nodejs`与`npm`,下载项目后在项目主目录下运行`npm/cnpm install`拉取依赖包，然后使用 `vue-cli` 或者直接使用命令`npm run serve`，就可以启动项目，启动项目后需要手动全屏（按 F11）。
+需要提前安装好`nodejs`与`npm`,下载项目后在项目主目录下运行`npm/cnpm install`拉取依赖包，然后使用 `vue-cli` 或者直接使用命令`npm run serve`，就可以启动项目，启动项目后需要手动全屏（按 F11）。   
 
-2. **如何请求数据**
+### 请求数据
 
    现在的项目未使用前后端数据请求，建议使用 axios 进行数据请求，在 main.js 位置进行全局配置，在 views/xx.vue 文件里进行前后端数据请求。
 
@@ -66,16 +67,16 @@ export default {
   },
   methods: {
 	async fetchList(){
-	  const { code,listData }= await this.$http.get("xx/xx/xx"x);
+	  const { code, listData } = await this.$http.get("xx/xx/xx");
 	  if(code === 200){
-		 this.ListDataSelf= listData;
+		 this.ListDataSelf = listData;
 	  }
 	}
   }
  }
 ```
 
-3. **如何动态渲染图表**
+###  动态渲染图表
 
    在`components/echart`下的文件，比如`drawPie()`是渲染函数，`echartData`是需要动态渲染的数据，当外界通过`props`传入新数据，我们可以使用`watch()`方法去监听，一但数据变化就调用`this.drawPie()`并触发内部的`.setOption`函数，重新渲染一次图表。
 
@@ -97,7 +98,7 @@ methods: {
  }
 ```
 
-4. **如何复用图表组件**
+###  复用图表组件
 
    因为 Echart 图表是根据`id/class`去获取 Dom 节点并进行渲染的，所以我们只要传入唯一的 id 值与需要的数据就可以进行复用。如中间部分的`任务通过率与任务达标率`组件就是采用复用的方式。
 
@@ -136,7 +137,7 @@ data() {
 
 然后在复用的组件`components/echart/center/centerChartRate`里进行接收并在用到的地方赋值。
 
-5. **如何更换边框**
+### 更换边框
 
    边框是使用了 DataV 自带的组件，只需要去 views 目录下去寻找对应的位置去查找并替换就可以，具体的种类请去 DavaV 官网查看
    如：
@@ -147,15 +148,15 @@ data() {
 <dv-border-box-3></dv-border-box-3>
 ```
 
-6. **如何更换图表**
+### 更换图表
 
    直接进入 `components/echart` 下的文件修改成你要的 echarts 模样，可以去[echarts 官方社区](https://gallery.echartsjs.com/explore.html#sort=rank~timeframe=all~author=all)里面查看案例。
 
-7. **Mixins 注入的问题**
+### Mixins 注入的
 
    使用 mixins 注入解决了图表重复书写响应式适配的代码，如果要更换(新增)图形，需要将`echarts.init()`函数赋值给`this.chart`，然后 mixins 才会自动帮你注入响应式功能。
 
-8. **屏幕适配问题**
+### 屏幕适配
 
    本项目借助了 flexible 插件，通过改变 rem 的值来进行适配，原设计为 1920px。 ，适配区间为：1366px ~ 2560px，本项目有根据实际情况进行源文件的更改，小屏幕（如:宽为 1366px）需要自己舍弃部分动态组件进行适配，如'动态文字变换组件'会影响布局，需要手动换成一般节点，
 

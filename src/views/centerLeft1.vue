@@ -11,7 +11,7 @@
         </div>
       </div>
       <div class="d-flex jc-center">
-        <centreLeft1Chart />
+        <CentreLeft1Chart />
       </div>
       <!-- 4个主要的数据 -->
       <div class="bottom-data">
@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import centreLeft1Chart from "@/components/echart/centerLeft2/centreLeft1Chart";
+import CentreLeft1Chart from "@/components/echart/centerLeft/centreLeft1Chart";
 export default {
   data() {
     return {
@@ -100,7 +100,7 @@ export default {
     };
   },
   components: {
-    centreLeft1Chart
+    CentreLeft1Chart
   },
   mounted() {
     this.changeTiming();

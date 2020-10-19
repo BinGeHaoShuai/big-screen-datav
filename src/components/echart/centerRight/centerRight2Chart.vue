@@ -153,9 +153,6 @@ export default {
       };
       this.chart.setOption(option);
     }
-  },
-  destroyed() {
-    window.onresize = null;
   }
 };
 </script>

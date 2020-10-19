@@ -19,11 +19,11 @@
       <div class="percent">
         <div class="item bg-color-black">
           <span>今日任务通过率</span>
-          <centerChart :id="rate[0].id" :tips="rate[0].tips" :colorObj="rate[0].colorData" />
+          <CenterChart :id="rate[0].id" :tips="rate[0].tips" :colorObj="rate[0].colorData" />
         </div>
         <div class="item bg-color-black">
           <span>今日任务达标率</span>
-          <centerChart :id="rate[1].id" :tips="rate[1].tips" :colorObj="rate[1].colorData" />
+          <CenterChart :id="rate[1].id" :tips="rate[1].tips" :colorObj="rate[1].colorData" />
         </div>
         <div class="water">
           <dv-water-level-pond :config="water" style="height: 1.5rem" />
@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import centerChart from "@/components/echart/center/centerChartRate";
+import CenterChart from "@/components/echart/center/centerChartRate";
 
 export default {
   data () {
@@ -133,7 +133,7 @@ export default {
           },
         ],
         carousel: "single",
-        unit: "份"
+        unit: "人"
       },
       water: {
         data: [24, 45],
@@ -175,7 +175,7 @@ export default {
     };
   },
   components: {
-    centerChart
+    CenterChart
     // centerChart1,
     // centerChart2
   }

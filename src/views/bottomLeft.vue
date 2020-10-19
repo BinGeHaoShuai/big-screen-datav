@@ -10,20 +10,20 @@
         </div>
       </div>
       <div>
-        <bottomLeftChart />
+        <BottomLeftChart />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import bottomLeftChart from "@/components/echart/bottom/bottomLeftChart";
+import BottomLeftChart from "@/components/echart/bottom/bottomLeftChart";
 export default {
   data() {
     return {};
   },
   components: {
-    bottomLeftChart
+    BottomLeftChart
   },
   mounted() {},
   methods: {}
