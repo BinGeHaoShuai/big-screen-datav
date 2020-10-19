@@ -6,7 +6,7 @@
           <icon name="chart-pie"></icon>
         </span>
         <div class="d-flex">
-          <span class="fs-xl text mx-2">数据情况雷达图</span>
+          <span class="fs-xl text mx-2">数据情况</span>
           <dv-decoration-1 style="width:1.25rem;height:.25rem; position:relative;top:-.0375rem;" />
         </div>
       </div>
@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import CentreLeft2Chart from "@/components/echart/centerLeft/centreLeft2Chart";
+import CentreLeft2Chart from "@/components/echart/centerLeft/centerLeft2Chart";
 export default {
   data() {
     return {};

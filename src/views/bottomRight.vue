@@ -8,7 +8,7 @@
         <div class="d-flex">
           <span class="fs-xl text mx-2">工单修复以及满意度统计图</span>
           <div class="decoration2">
-            <dv-decoration-2 :reverse="true" style="width:5px;height:480px;" />
+            <dv-decoration-2 :reverse="true" style="width:5px;height:6rem;" />
           </div>
         </div>
       </div>

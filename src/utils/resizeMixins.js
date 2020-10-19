@@ -4,7 +4,7 @@ const resizeChartMethod = '$__resizeChartMethod';
 
 export default {
   data() {
-    // 在组件内部将图表init的引用映射到chart属性上
+    // 在组件内部将图表 init 的引用映射到 chart 属性上
     return {
       chart: null,
     };
@@ -13,7 +13,7 @@ export default {
     window.addEventListener('resize', this[resizeChartMethod], false);
   },
   activated() {
-    // 防止keep-alive之后图表变形
+    // 防止 keep-alive 之后图表变形
     if (this.chart) {
       this.chart.resize()
     }
@@ -22,11 +22,12 @@ export default {
     window.removeEventListener('reisze', this[resizeChartMethod]);
   },
   methods: {
-    // 通过lodash的防抖函数来控制resize的频率
+    // 通过 lodash 的防抖函数来控制 resize 的频率
     [resizeChartMethod]: debounce(function() {
       if (this.chart) {
+        console.log('修改');
         this.chart.resize();
       }
-    }, 100),
+    }, 300),
   },
 };

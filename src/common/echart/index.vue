@@ -1,13 +1,13 @@
 <template>
-  <div :id="id" :class="className" :style="{height:height,width:width}" />
+  <div :id="id" :class="className" :style="{ height: height, width: width }" />
 </template>
 
 <script>
 import tdTheme from './theme.json' // 引入默认主题
 import echartMixins from "@/utils/resizeMixins";
-this.$echarts.registerTheme('tdTheme', tdTheme) // 覆盖默认主题
+
 export default {
-  name: 'Echarts',
+  name: 'echart',
   mixins: [echartMixins],
   props: {
     className: {
@@ -28,30 +28,31 @@ export default {
     },
     options: {
       type: Object,
-      default: undefined
+      default: ()=>({})
     }
   },
-  data() {
+  data () {
     return {
       chart: null
     }
   },
   watch: {
     options: {
-      handler(options) {
+      handler (options) {
         // 设置true清空echart缓存
         this.chart.setOption(options, true)
       },
       deep: true
     }
   },
-  mounted() {
-    this.initChart()
+  mounted () {
+    this.$echarts.registerTheme('tdTheme', tdTheme); // 覆盖默认主题
+    this.initChart();
   },
   methods: {
-    initChart() {
+    initChart () {
       // 初始化echart
-      this.chart = echarts.init(this.$el, 'tdTheme')
+      this.chart = this.$echarts.init(this.$el, 'tdTheme')
       this.chart.setOption(this.options, true)
     }
   }
