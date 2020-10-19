@@ -1,5 +1,5 @@
 /**
- * @param {Function} fn 函数
+ * @param {Function} fn 防抖函数
  * @param {Number} delay 延迟时间
  */
 export function debounce(fn, delay) {

@@ -51,8 +51,6 @@ export default {
       for (let i = 0; i < 7; i++) {
         // 日期
         let date = new Date();
-        console.log(date.getMonth());
-        console.log(date.getDate());
         this.cdata.weekCategory.unshift([date.getMonth() + 1, date.getDate()-i].join("/"));
 
         // 折线图数据

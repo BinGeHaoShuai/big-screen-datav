@@ -22,10 +22,9 @@ export default {
     window.removeEventListener('reisze', this[resizeChartMethod]);
   },
   methods: {
-    // 通过 lodash 的防抖函数来控制 resize 的频率
+    // 防抖函数来控制 resize 的频率
     [resizeChartMethod]: debounce(function() {
       if (this.chart) {
-        console.log('修改');
         this.chart.resize();
       }
     }, 300),
