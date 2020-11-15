@@ -48,11 +48,11 @@
 
 参数名称              | 类型      | 作用/功能                      |
 | -------------------| --------- | ------------------------------|
-| id                 | String    | 唯一 id，渲染图表的节点         |
-| className          | String    | class样式名称                  |
-| options            | Object    | ECharts 配置                   |
-| height             | String    | 图表高度                       |
-| width              | String    | 图表宽度                       |
+| id                 | String    | 唯一 id，渲染图表的节点（非必填，使用了 $el）|
+| className          | String    | class样式名称（非必填）                 |
+| options            | Object    | ECharts 配置（必填）                   |
+| height             | String    | 图表高度（建议填）                    |
+| width              | String    | 图表宽度（建议填）                    |
 
 ### 动态渲染图表
 
@@ -104,7 +104,7 @@ export default {
 
 复用图表组件案例为中间部分的 `任务通过率与任务达标率` 模块，两个图表类似，区别在于颜色和主要渲染数据。只需要传入对应的唯一 id 和样式，然后在复用的组件 `components/echart/center/centerChartRate` 里进行接收并在对应位置赋值即可。
 
-如：在调用处 `views/center.vue` 里去定义好数据并传入组件（项目里的所有 `id` 都不能重复!!!）
+如：在调用处 `views/center.vue` 里去定义好数据并传入组件
 
 ```js
 //组件调用
