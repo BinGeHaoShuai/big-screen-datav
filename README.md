@@ -202,6 +202,7 @@ Vue.prototype.$http = axios.create({
 4. 使用 Mixins 注入图表响应式代码。
 5. vue-awesome 改成按需引入的方式。
 6. 封装渲染函数，抽离了数据使逻辑更加清晰。
+7. 新增地图组件，并添加自动轮播功能
 
 ## 五、其余
 
