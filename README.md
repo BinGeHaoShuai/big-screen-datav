@@ -8,6 +8,7 @@
 - 项目环境：Vue-cli-3.0、DataV-2.7.3、Echarts-4.6.0(如果5.x版本有问题，请切换到4.x版本)、Webpack-4.0、Npm-6.13、Node-v12.16。
 - 请拉取 master 分支的代码，其余分支是开发分支。
 - Vue3 版本代码在新项目 vue-big-screen-plugin 开发当中，敬请期待~
+
 友情链接：
 
 1.  [Vue 官方文档](https://cn.vuejs.org/v2/guide/instance.html)
