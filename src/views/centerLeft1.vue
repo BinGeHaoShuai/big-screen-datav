@@ -35,34 +35,6 @@ import CentreLeft1Chart from "@/components/echart/centerLeft/centerLeft1Chart";
 export default {
   data() {
     return {
-      config: {
-        lineWidth: 30,
-        activeRadius: "80%",
-        radius: "75%",
-        activeTimeGap: 2000,
-        data: [
-          {
-            name: "周口",
-            value: 55
-          },
-          {
-            name: "南阳",
-            value: 120
-          },
-          {
-            name: "西峡",
-            value: 78
-          },
-          {
-            name: "驻马店",
-            value: 66
-          },
-          {
-            name: "新乡",
-            value: 80
-          }
-        ]
-      },
       numberData: [
         {
           number: {
