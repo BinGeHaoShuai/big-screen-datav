@@ -1,5 +1,5 @@
 <template>
-  <div id="centreRight1">
+  <div id="centerRight1">
     <div class="bg-color-black">
       <div class="d-flex pt-2 pl-2">
         <span style="color:#5cd9e8">
@@ -52,7 +52,7 @@ export default {
 </script>
 
 <style lang="scss">
-#centreRight1 {
+#centerRight1 {
   padding: 0.2rem;
   height: 5.125rem;
   min-width: 3.75rem;

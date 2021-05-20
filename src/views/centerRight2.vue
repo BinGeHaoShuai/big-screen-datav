@@ -1,5 +1,5 @@
 <template>
-  <div id="centreRight2">
+  <div id="centerRight2">
     <div class="bg-color-black">
       <div class="d-flex pt-2 pl-2">
         <span style="color:#5cd9e8">
@@ -10,14 +10,14 @@
       <div class="d-flex jc-center body-box" style=" margin-top: 0;">
         <dv-capsule-chart :config="config" style="width: 100%;height:2rem" />
         <!-- ---------------------------------------- -->
-        <centreRight2Chart1 />
+        <centerRight2Chart1 />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import centreRight2Chart1 from "@/components/echart/centerRight/centerRightChart";
+import centerRight2Chart1 from "@/components/echart/centerRight/centerRightChart";
 
 export default {
   data() {
@@ -48,14 +48,14 @@ export default {
       }
     };
   },
-  components: { centreRight2Chart1 },
+  components: { centerRight2Chart1 },
   mounted() {},
   methods: {}
 };
 </script>
 
 <style lang="scss">
-#centreRight2 {
+#centerRight2 {
   padding: 0.0625rem;
   height: 5rem;
   min-width: 3.75rem;
