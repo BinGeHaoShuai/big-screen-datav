@@ -1,5 +1,5 @@
 <template>
-  <div id="centreLeft1">
+  <div id="centerLeft1">
     <div class="bg-color-black">
       <div class="d-flex pt-2 pl-2">
         <span style="color:#5cd9e8">
@@ -11,20 +11,20 @@
         </div>
       </div>
       <div class="d-flex jc-center">
-        <CentreLeft2Chart />
+        <CenterLeft2Chart />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import CentreLeft2Chart from "@/components/echart/centerLeft/centerLeft2Chart";
+import CenterLeft2Chart from "@/components/echart/centerLeft/centerLeft2Chart";
 export default {
   data() {
     return {};
   },
   components: {
-    CentreLeft2Chart
+    CenterLeft2Chart
   },
   mounted() {},
   methods: {}
@@ -32,7 +32,7 @@ export default {
 </script>
 
 <style lang="scss">
-#centreLeft1 {
+#centerLeft1 {
   padding: 0.2rem;
   height: 5.125rem;
   min-width: 3.75rem;

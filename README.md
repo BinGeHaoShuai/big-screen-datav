@@ -1,12 +1,15 @@
 ## 一、项目描述
 
-- [**React 版本请点击这里查看，全新界面超级好看！！！(o ﾟ v ﾟ)ノ**](https://gitee.com/MTrun/react-big-screen)
 - 一个基于 Vue、Datav、Echart 框架的 " **数据大屏项目** "，通过 Vue 组件实现数据动态刷新渲染，内部图表可实现自由替换。部分图表使用 DataV 自带组件，可进行更改，详情请点击下方 DataV 文档。
+
+- [**Vue3 版本请点击这里查看，使用 Hooks+TypeScript 实现，全新内容等你探索!**](https://gitee.com/MTrun/vue-big-screen-plugin)
+- [**React 版本请点击这里查看，全新界面超级好看！！！**](https://gitee.com/MTrun/react-big-screen)
 - 项目需要全屏展示（按 F11）。
 - 项目部分区域使用了全局注册方式，增加了打包体积，在实际运用中请使用 **按需引入**。
 - 拉取项目之后，建议按照自己的功能区域重命名文件，现以简单的位置进行区分。
 - 项目环境：Vue-cli-3.0、DataV-2.7.3、Echarts-4.6.0(如果5.x版本有问题，请切换到4.x版本)、Webpack-4.0、Npm-6.13、Node-v12.16。
-- 请拉取 master 分支的代码，其余是开发分支。
+- 请拉取 master 分支的代码，其余分支是开发分支。
+- Vue3 版本代码在新项目 vue-big-screen-plugin 开发当中，敬请期待~
 
 友情链接：
 
@@ -36,7 +39,7 @@
 
 ### 启动项目
 
-需要提前安装好 `nodejs` 与 `npm`,下载项目后在项目主目录下运行 `npm/cnpm install` 拉取依赖包。安装完依赖包之后然后使用 `vue-cli` 或者直接使用命令`npm run serve`，就可以启动项目，启动项目后需要手动全屏（按 F11）。如果编译项目的时候提示没有 DataV 框架的依赖，输入 `npm install @jiaminghi/data-view` 或者 `yarn add @jiaminghi/data-view` 进行手动安装。
+需要提前安装好 `nodejs` 与 `yarn`,下载项目后在项目主目录下运行 `yarn` 拉取依赖包。安装完依赖包之后然后使用 `vue-cli` 或者直接使用命令`npm run serve`，就可以启动项目，启动项目后需要手动全屏（按 F11）。如果编译项目的时候提示没有 DataV 框架的依赖，输入 `npm install @jiaminghi/data-view` 或者 `yarn add @jiaminghi/data-view` 进行手动安装。
 
 ### 封装组件渲染图表
 
@@ -158,7 +161,7 @@ data() {
 
 ### 屏幕适配
 
-本项目借助了 flexible 插件，通过改变 rem 的值来进行适配，原设计为 1920px。 ，适配区间为：1366px ~ 2560px，本项目有根据实际情况进行源文件的更改，小屏幕（如:宽为 1366px）需要自己舍弃部分动态组件进行适配，如'动态文字变换组件'会影响布局，需要手动换成一般节点，
+本项目借助了 flexible 插件，通过改变 rem 的值来进行适配，原设计为 1920px，适配区间为：1366px ~ 2560px，本项目有根据实际情况进行源文件的更改，小屏幕（如:宽为 1366px）需要自己舍弃部分动态组件进行适配，如'动态文字变换组件'会影响布局，需要手动换成一般节点。
 
 ```js
 // flexible文件位置: `common/flexible.js`,修改部分如下

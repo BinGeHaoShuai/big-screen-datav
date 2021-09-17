@@ -1,5 +1,5 @@
 <template>
-  <div id="centreLeft1">
+  <div id="centerLeft1">
     <div class="bg-color-black">
       <div class="d-flex pt-2 pl-2">
         <span style="color:#5cd9e8">
@@ -11,7 +11,7 @@
         </div>
       </div>
       <div class="d-flex jc-center">
-        <CentreLeft1Chart />
+        <CenterLeft1Chart />
       </div>
       <!-- 4个主要的数据 -->
       <div class="bottom-data">
@@ -31,38 +31,10 @@
 </template>
 
 <script>
-import CentreLeft1Chart from "@/components/echart/centerLeft/centerLeft1Chart";
+import CenterLeft1Chart from "@/components/echart/centerLeft/centerLeft1Chart";
 export default {
   data() {
     return {
-      config: {
-        lineWidth: 30,
-        activeRadius: "80%",
-        radius: "75%",
-        activeTimeGap: 2000,
-        data: [
-          {
-            name: "周口",
-            value: 55
-          },
-          {
-            name: "南阳",
-            value: 120
-          },
-          {
-            name: "西峡",
-            value: 78
-          },
-          {
-            name: "驻马店",
-            value: 66
-          },
-          {
-            name: "新乡",
-            value: 80
-          }
-        ]
-      },
       numberData: [
         {
           number: {
@@ -100,7 +72,7 @@ export default {
     };
   },
   components: {
-    CentreLeft1Chart
+    CenterLeft1Chart
   },
   mounted() {
     this.changeTiming();
@@ -122,7 +94,7 @@ export default {
 </script>
 
 <style lang="scss">
-#centreLeft1 {
+#centerLeft1 {
   padding: 0.2rem;
   height: 5.125rem;
   min-width: 3.75rem;
