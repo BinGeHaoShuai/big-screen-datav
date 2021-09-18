@@ -2,8 +2,8 @@
   <div id="bottomRight">
     <div class="bg-color-black">
       <div class="d-flex pt-2 pl-2">
-        <span style="color:#5cd9e8">
-          <icon name="chart-area"></icon>
+        <span>
+          <icon name="chart-area" class="text-icon"></icon>
         </span>
         <div class="d-flex">
           <span class="fs-xl text mx-2">工单修复以及满意度统计图</span>
@@ -22,40 +22,38 @@
 <script>
 import BottomRightChart from "@/components/echart/bottom/bottomRightChart";
 export default {
-  data() {
-    return {};
-  },
   components: {
     BottomRightChart
-  },
-  mounted() {},
-  methods: {}
+  }
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" class>
+$box-height: 520px;
+$box-width: 100%;
 #bottomRight {
-  padding: 0.2rem 0.2rem 0;
-  height: 6.5rem;
-  min-width: 3.75rem;
-  border-radius: 0.0625rem;
+  padding: 14px 16px;
+  height: $box-height;
+  width: $box-width;
+  border-radius: 5px;
   .bg-color-black {
-    height: 6.1875rem;
-    border-radius: 0.125rem;
+    height: $box-height - 30px;
+    border-radius: 10px;
   }
   .text {
     color: #c3cbde;
-  } //下滑线动态
+  }
+  //下滑线动态
   .decoration2 {
     position: absolute;
     right: 0.125rem;
   }
   .chart-box {
-    margin-top: 0.2rem;
-    width: 2.125rem;
-    height: 2.125rem;
+    margin-top: 16px;
+    width: 170px;
+    height: 170px;
     .active-ring-name {
-      padding-top: 0.125rem;
+      padding-top: 10px;
     }
   }
 }

@@ -1,6 +1,6 @@
 // 颜色
 $colors: (
-  "primary": #db9e3f,
+  "primary": #1A5CD7,
   "info-1": #4394e4,
   "info": #4b67af,
   "white": #ffffff,
@@ -11,6 +11,7 @@ $colors: (
   "dark": #222222,
   "black-1": #171823,
   "black": #000000,
+  "icon": #5cd9e8
 );
 
 // 字体大小
@@ -86,12 +87,12 @@ $spacing-directions: (
   b: bottom,
   l: left,
 );
-$spacing-base-size: 0.2rem;
+$spacing-base-size: 0.5rem;
 $spacing-sizes: (
   0: 0,
-  1: 0.25,
-  2: 0.5,
-  3: 1,
-  4: 1.5,
-  5: 3,
+  1: 0.5,
+  2: 1,
+  3: 1.5,
+  4: 2,
+  5: 2.5,
 );

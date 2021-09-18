@@ -4,8 +4,8 @@
       id="centreLeft2Chart"
       ref="centreLeft2ChartRef"
       :options="options"
-      height="4.5rem"
-      width="4.125rem"
+      height="360px"
+      width="330px"
     ></Echart>
   </div>
 </template>
@@ -224,57 +224,65 @@ export default {
     reSelectMapRandomArea() {
       const length = 9;
       this.$nextTick(() => {
-        const map = this.$refs.centreLeft2ChartRef.chart;
-        let index = Math.floor(Math.random() * length);
-        while (index === this.preSelectMapIndex || index >= length) {
-          index = Math.floor(Math.random() * length);
-        }
-        map.dispatchAction({
-          type: 'mapUnSelect',
-          seriesIndex: 0,
-          dataIndex: this.preSelectMapIndex,
-        });
-        map.dispatchAction({
-          type: 'showTip',
-          seriesIndex: 0,
-          dataIndex: index,
-        });
-        map.dispatchAction({
-          type: 'mapSelect',
-          seriesIndex: 0,
-          dataIndex: index,
-        });
-        this.preSelectMapIndex = index;
-      });
-    },
-    handleMapRandomSelect() {
-      this.$nextTick(() => {
-        const map = this.$refs.centreLeft2ChartRef.chart;
-        const _self = this;
-        setTimeout(() => {
-          _self.reSelectMapRandomArea();
-        }, 0);
-        // 移入区域，清除定时器、取消之前选中并选中当前
-        map.on('mouseover', function (params) {
-          clearInterval(_self.intervalId);
+        try {
+          const map = this.$refs.centreLeft2ChartRef.chart;
+          let index = Math.floor(Math.random() * length);
+          while (index === this.preSelectMapIndex || index >= length) {
+            index = Math.floor(Math.random() * length);
+          }
           map.dispatchAction({
             type: 'mapUnSelect',
             seriesIndex: 0,
-            dataIndex: _self.preSelectMapIndex,
+            dataIndex: this.preSelectMapIndex,
+          });
+          map.dispatchAction({
+            type: 'showTip',
+            seriesIndex: 0,
+            dataIndex: index,
           });
           map.dispatchAction({
             type: 'mapSelect',
             seriesIndex: 0,
-            dataIndex: params.dataIndex,
+            dataIndex: index,
           });
-          _self.preSelectMapIndex = params.dataIndex;
-        });
-        // 移出区域重新随机选中地图区域，并开启定时器
-        map.on('globalout', function () {
-          _self.reSelectMapRandomArea();
-          _self.startInterval();
-        });
-        this.startInterval();
+          this.preSelectMapIndex = index;
+        } catch (error) {
+          console.log(error)
+        }
+      });
+    },
+    handleMapRandomSelect() {
+      this.$nextTick(() => {
+        try {
+          const map = this.$refs.centreLeft2ChartRef.chart;
+          const _self = this;
+          setTimeout(() => {
+            _self.reSelectMapRandomArea();
+          }, 0);
+          // 移入区域，清除定时器、取消之前选中并选中当前
+          map.on('mouseover', function (params) {
+            clearInterval(_self.intervalId);
+            map.dispatchAction({
+              type: 'mapUnSelect',
+              seriesIndex: 0,
+              dataIndex: _self.preSelectMapIndex,
+            });
+            map.dispatchAction({
+              type: 'mapSelect',
+              seriesIndex: 0,
+              dataIndex: params.dataIndex,
+            });
+            _self.preSelectMapIndex = params.dataIndex;
+          });
+          // 移出区域重新随机选中地图区域，并开启定时器
+          map.on('globalout', function () {
+            _self.reSelectMapRandomArea();
+            _self.startInterval();
+          });
+          this.startInterval();
+        } catch (error) {
+          console.log(error)
+        }
       });
     },
   },

@@ -2,12 +2,12 @@
   <div id="centerLeft1">
     <div class="bg-color-black">
       <div class="d-flex pt-2 pl-2">
-        <span style="color:#5cd9e8">
-          <icon name="chart-pie"></icon>
+        <span>
+          <icon name="chart-pie" class="text-icon"></icon>
         </span>
         <div class="d-flex">
           <span class="fs-xl text mx-2">地图数据</span>
-          <dv-decoration-1 style="width:1.25rem;height:.25rem; position:relative;top:-.0375rem;" />
+          <dv-decoration-1 class="dv-dec-1" />
         </div>
       </div>
       <div class="d-flex jc-center">
@@ -20,36 +20,39 @@
 <script>
 import CenterLeft2Chart from "@/components/echart/centerLeft/centerLeft2Chart";
 export default {
-  data() {
-    return {};
-  },
   components: {
     CenterLeft2Chart
   },
-  mounted() {},
-  methods: {}
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 #centerLeft1 {
-  padding: 0.2rem;
-  height: 5.125rem;
-  min-width: 3.75rem;
-  border-radius: 0.0625rem;
+  $box-width: 300px;
+  $box-height: 410px;
+  padding: 16px;
+  height: $box-height;
+  min-width: $box-width;
+  border-radius: 5px;
   .bg-color-black {
-    height: 4.8125rem;
-    border-radius: 0.125rem;
+    height: $box-height - 30px;
+    border-radius: 10px;
   }
   .text {
     color: #c3cbde;
   }
+  .dv-dec-1 {
+    position: relative;
+    width: 100px;
+    height: 20px;
+    top: -3px;
+  }
   .chart-box {
-    margin-top: 0.2rem;
-    width: 2.125rem;
-    height: 2.125rem;
+    margin-top: 16px;
+    width: 170px;
+    height: 170px;
     .active-ring-name {
-      padding-top: 0.125rem;
+      padding-top: 10px;
     }
   }
 }

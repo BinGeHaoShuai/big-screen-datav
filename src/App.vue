@@ -4,13 +4,11 @@
   </div>
 </template>
 
-<style lang="scss">
-body {
-  margin: 0;
-}
+<style lang="scss" scoped>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
+  height: 100vh;
+  background-color: #020308;
+  overflow: hidden;
 }
 </style>

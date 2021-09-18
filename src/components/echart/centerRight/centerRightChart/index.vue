@@ -50,13 +50,6 @@ export default {
   },
   components: {
     Chart,
-  },
-  mounted () {
-  },
-  methods: {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-</style>

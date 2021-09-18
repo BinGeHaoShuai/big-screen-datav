@@ -2,8 +2,8 @@
   <div id="bottomLeft">
     <div class="bg-color-black">
       <div class="d-flex pt-2 pl-2">
-        <span style="color:#5cd9e8">
-          <icon name="chart-bar"></icon>
+        <span>
+          <icon name="chart-bar" class="text-icon"></icon>
         </span>
         <div class="d-flex">
           <span class="fs-xl text mx-2">数据统计图</span>
@@ -17,38 +17,35 @@
 </template>
 
 <script>
-import BottomLeftChart from "@/components/echart/bottom/bottomLeftChart";
+import BottomLeftChart from '@/components/echart/bottom/bottomLeftChart'
 export default {
-  data() {
-    return {};
-  },
   components: {
     BottomLeftChart
-  },
-  mounted() {},
-  methods: {}
-};
+  }
+}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+$box-height: 520px;
+$box-width: 100%;
 #bottomLeft {
-  padding: 0.3rem 0.2rem;
-  height: 6.5rem;
-  min-width: 3.75rem;
-  border-radius: 0.0625rem;
+  padding: 20px 16px;
+  height: $box-height;
+  width: $box-width;
+  border-radius: 5px;
   .bg-color-black {
-    height: 6.0625rem;
-    border-radius: 0.125rem;
+    height: $box-height - 35px;
+    border-radius: 10px;
   }
   .text {
     color: #c3cbde;
   }
   .chart-box {
-    margin-top: 0.2rem;
-    width: 2.125rem;
-    height: 2.125rem;
+    margin-top: 16px;
+    width: 170px;
+    height: 170px;
     .active-ring-name {
-      padding-top: 0.125rem;
+      padding-top: 10px;
     }
   }
 }

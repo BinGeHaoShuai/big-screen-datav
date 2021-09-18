@@ -3,8 +3,8 @@
     <Echart
       :options="options"
       id="centreRight2Chart1"
-      height="2.60rem"
-      width="100%"
+      height="200px"
+      width="260px"
     ></Echart>
   </div>
 </template>
@@ -42,6 +42,7 @@ export default {
             indicator: newData.indicatorData,
             shape: "circle",
             splitNumber: 5,
+            radius: ["0%", "65%"],
             name: {
               textStyle: {
                 color: "rgb(238, 197, 102)"

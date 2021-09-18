@@ -4,8 +4,8 @@
     <Echart
       :options="options"
       :id="id"
-      height="1.25rem"
-      width="1.5rem"
+      height="100px"
+      width="100px"
     ></Echart>
   </div>
 </template>

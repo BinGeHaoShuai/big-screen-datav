@@ -10,14 +10,14 @@ export default {
   data () {
     return {
       cdata: {
-        xData: ["rose1", "rose2", "rose3", "rose4", "rose5", "rose6"],
+        xData: ["data1", "data2", "data3", "data4", "data5", "data6"],
         seriesData: [
-          { value: 10, name: "rose1" },
-          { value: 5, name: "rose2" },
-          { value: 15, name: "rose3" },
-          { value: 25, name: "rose4" },
-          { value: 20, name: "rose5" },
-          { value: 35, name: "rose6" }
+          { value: 10, name: "data1" },
+          { value: 5, name: "data2" },
+          { value: 15, name: "data3" },
+          { value: 25, name: "data4" },
+          { value: 20, name: "data5" },
+          { value: 35, name: "data6" }
         ]
       }
     }

@@ -4,12 +4,10 @@
 
 <script>
 import tdTheme from './theme.json' // 引入默认主题
-import resizeMixins from "@/utils/resizeMixins";
 import '../map/fujian.js'
 
 export default {
   name: 'echart',
-  mixins: [resizeMixins],
   props: {
     className: {
       type: String,
