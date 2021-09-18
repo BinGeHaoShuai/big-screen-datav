@@ -1,6 +1,6 @@
 {
   "name": "big-screen-vue-datav",
-  "version": "1.0.1",
+  "version": "1.5",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",

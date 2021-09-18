@@ -161,24 +161,7 @@ data() {
 
 ### 屏幕适配
 
-本项目借助了 flexible 插件，通过改变 rem 的值来进行适配，原设计为 1920px，适配区间为：1366px ~ 2560px，本项目有根据实际情况进行源文件的更改，小屏幕（如:宽为 1366px）需要自己舍弃部分动态组件进行适配，如'动态文字变换组件'会影响布局，需要手动换成一般节点。
-
-```js
-// flexible文件位置: `common/flexible.js`,修改部分如下
-function refreshRem() {
-  var width = docEl.getBoundingClientRect().width;
-  // 最小1366px，最大适配2560px
-  if (width / dpr < 1366) {
-    width = 1366 * dpr;
-  } else if (width / dpr > 2560) {
-    width = 2560 * dpr;
-  }
-  // 原项目是1920px我设置成24等份，这样1rem就是80px
-  var rem = width / 24;
-  docEl.style.fontSize = rem + 'px';
-  flexible.rem = win.rem = rem;
-}
-```
+1.5 版本本项目放弃了 flexible 插件方案，将 rem 改回px，使用更流程通用的 `css3：scale` 缩放方案，项目的基准尺寸是 `1920px*1080px`，所以支持用比例屏幕 100% 填充，如果非同比例则会自动计算比例居中填充，不足的部分则留白。实现代码在 `src/utils/userDraw.ts` 中，通过 `ref` 指向 `views/index` ，如果觉得 Vue2 版本的适配方案不能试图您的场景，则可以参考此方案进行代替。
 
 ### 请求数据
 
