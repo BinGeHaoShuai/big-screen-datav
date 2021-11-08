@@ -24,7 +24,7 @@ export default {
     this.calcRate()
     window.addEventListener('resize', this.resize)
   },
-  unMounted () {
+  beforeDestroy () {
     window.removeEventListener('resize', this.resize)
   },
   methods: {

@@ -127,7 +127,7 @@ export default {
     this.timeFn()
     this.cancelLoading()
   },
-  unMounted() {
+  beforeDestroy () {
     clearInterval(this.timing)
   },
   methods: {
