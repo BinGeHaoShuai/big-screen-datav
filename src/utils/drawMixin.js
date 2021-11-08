@@ -30,7 +30,6 @@ export default {
   methods: {
     calcRate () {
       const appRef = this.$refs["appRef"]
-      console.log(appRef)
       if (!appRef) return 
       // 当前宽高比
       const currentRate = parseFloat((window.innerWidth / window.innerHeight).toFixed(5))

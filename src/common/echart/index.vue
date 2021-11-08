@@ -48,6 +48,10 @@ export default {
     this.$echarts.registerTheme('tdTheme', tdTheme); // 覆盖默认主题
     this.initChart();
   },
+  beforeDestroy () {
+    this.chart.dispose()
+    this.chart = null
+  },
   methods: {
     initChart () {
       // 初始化echart
