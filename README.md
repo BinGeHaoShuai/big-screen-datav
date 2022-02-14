@@ -1,3 +1,9 @@
+ **QQ交流群： 713105837 开源项目Vue/Vue3/React-big-screen交流群** 
+
+QQ群二维码：
+
+![输入图片说明](public/image.png)
+
 ## 一、项目描述
 
 - 一个基于 Vue、Datav、Echart 框架的 " **数据大屏项目** "，通过 Vue 组件实现数据动态刷新渲染，内部图表可实现自由替换。部分图表使用 DataV 自带组件，可进行更改，详情请点击下方 DataV 文档。
