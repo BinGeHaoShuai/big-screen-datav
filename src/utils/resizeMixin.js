@@ -1,4 +1,5 @@
 // 混入代码 resize-mixins.js
+// 改成 Scale 缩放之后，没有使用这个代码，但是保留
 import { debounce } from '@/utils';
 const resizeChartMethod = '$__resizeChartMethod';
 
