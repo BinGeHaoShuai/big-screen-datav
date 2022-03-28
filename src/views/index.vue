@@ -28,10 +28,10 @@
         <div class="d-flex jc-between px-2">
           <div class="d-flex aside-width">
             <div class="react-left ml-4 react-l-s">
-              <span class="react-before"></span>
+              <span class="react-left"></span>
               <span class="text">数据分析1</span>
             </div>
-            <div class="react-right ml-3">
+            <div class="react-left ml-3">
               <span class="text">数据分析2</span>
             </div>
           </div>
