@@ -6,7 +6,7 @@
         <div class="d-flex jc-center">
           <dv-decoration-10 class="dv-dec-10" />
           <div class="d-flex jc-center">
-            <dv-decoration-8 class="dv-dec-8" :color="['#568aea', '#000000']" />
+            <dv-decoration-8 class="dv-dec-8" :color="decorationColor" />
             <div class="title">
               <span class="title-text">大数据可视化平台</span>
               <dv-decoration-6
@@ -18,7 +18,7 @@
             <dv-decoration-8
               class="dv-dec-8"
               :reverse="true"
-              :color="['#568aea', '#000000']"
+              :color="decorationColor"
             />
           </div>
           <dv-decoration-10 class="dv-dec-10-s" />
@@ -111,7 +111,8 @@ export default {
       dateDay: null,
       dateYear: null,
       dateWeek: null,
-      weekday: ['周日', '周一', '周二', '周三', '周四', '周五', '周六']
+      weekday: ['周日', '周一', '周二', '周三', '周四', '周五', '周六'],
+      decorationColor: ['#568aea', '#000000']
     }
   },
   components: {
