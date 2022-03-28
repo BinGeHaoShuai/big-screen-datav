@@ -44,10 +44,7 @@ export default {
         align: ['center']
       }
     }
-  },
-  components: {},
-  mounted() {},
-  methods: {}
+  }
 }
 </script>
 
