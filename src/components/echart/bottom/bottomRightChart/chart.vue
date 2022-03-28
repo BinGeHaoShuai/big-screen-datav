@@ -101,21 +101,6 @@ export default {
     cdata: {
       handler (newData) {
         this.options = {
-          title: {
-            text: "",
-            textStyle: {
-              color: "#D3D6DD",
-              fontSize: 24,
-              fontWeight: "normal"
-            },
-            subtext: newData.year + "/" + newData.weekCategory[6],
-            subtextStyle: {
-              color: "#fff",
-              fontSize: 16
-            },
-            top: 50,
-            left: 80
-          },
           legend: {
             top: 120,
             left: 80,
