@@ -17,6 +17,21 @@ export default {
       options: {},
       // 定义颜色
       colorList: {
+        title: {
+          text: "",
+          textStyle: {
+            color: "#D3D6DD",
+            fontSize: 24,
+            fontWeight: "normal"
+          },
+          subtext: newData.year + "/" + newData.weekCategory[6],
+          subtextStyle: {
+            color: "#fff",
+            fontSize: 16
+          },
+          top: 50,
+          left: 80
+        },
         linearYtoG: {
           type: "linear",
           x: 0,
