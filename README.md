@@ -1,8 +1,6 @@
- **QQ交流群： 713105837 开源项目Vue/Vue3/React-big-screen交流群** 
+**通知：最新的低代码大屏系统GoView已开源，详见：[https://gitee.com/MTrun/go-view](https://gitee.com/MTrun/go-view)**
 
-QQ群二维码：
-
-![输入图片说明](public/image.png)
+![输入图片说明](https://gitee.com/MTrun/go-view/raw/master/public/logo-t-y.png)
 
 ## 一、项目描述
 
@@ -22,7 +20,6 @@ QQ群二维码：
 1.  [Vue 官方文档](https://cn.vuejs.org/v2/guide/instance.html)
 2.  [DataV 官方文档](http://datav.jiaminghi.com/guide/)
 3.  [echarts 实例](https://echarts.apache.org/examples/zh/index.html)，[echarts API 文档](https://echarts.apache.org/zh/api.html#echarts)
-4.  [项目 gitee 地址（国内速度快）](https://gitee.com/MTrun/big-screen-vue-datav)
 
 项目展示
 ![项目展示](https://images.gitee.com/uploads/images/2020/1208/183608_b893a510_4964818.gif "20201208_221020.gif")
@@ -196,5 +193,15 @@ Vue.prototype.$http = axios.create({
 6. 新增地图组件，并添加自动轮播功能
 7. 将适配方案从 rem 改成 scale
 ## 五、其余
+
+## 反馈
+QQ群二维码：
+
+![输入图片说明](public/image.png)
+
+
+## 相关大屏案例（以下案例为基于此项目二次开发）：
+
+1. https://gitee.com/memeda520/IofTV-Screen
 
 这个项目是个人的作品，难免会有问题和 BUG，如果有问题请进行评论，我也会尽力去更新，自己也在前端学习的路上，欢迎交流，非常感谢！
