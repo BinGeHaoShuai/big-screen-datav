@@ -1,6 +1,6 @@
 **通知：最新的低代码大屏系统GoView已开源，详见：[https://gitee.com/MTrun/go-view](https://gitee.com/MTrun/go-view)**
 
-![输入图片说明](https://gitee.com/MTrun/go-view/raw/master/public/logo-t-y.png)
+![输入图片说明](https://gitee.com/MTrun/go-view/raw/master/readme/logo-t-y.png)
 
 ## 一、项目描述
 
