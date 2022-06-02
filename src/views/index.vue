@@ -77,7 +77,7 @@
           </div>
 
           <!-- 第四行数据 -->
-          <div class="bototm-box">
+          <div class="bottom-box">
             <dv-border-box-13>
               <bottomLeft />
             </dv-border-box-13>
