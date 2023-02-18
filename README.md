@@ -1,11 +1,13 @@
 **通知：最新的低代码大屏系统GoView已开源，详见：[https://gitee.com/MTrun/go-view](https://gitee.com/MTrun/go-view)**
 
-![输入图片说明](https://gitee.com/MTrun/go-view/raw/master/readme/logo-t-y.png)
+<p align="center">
+    <img src="https://gitee.com/MTrun/go-view/raw/master/readme/logo-t-y.png" alt="go-view" />
+</p>
 
 #### 长期赞助商
 
 <a href="http://www.ccflow.org/?from=goviewGitee" target="_blank">
-    <img src="https://gitee.com/dromara/go-view/raw/master/readme/sponsors/ccflow-banner.png" alt="go-view" style="width: 250px!important;" width="250px!important;" />
+    <img src="https://gitee.com/dromara/go-view/raw/master/readme/sponsors/ccflow-banner.png" alt="go-view" style="width: 280px!important;" width="280px!important;" />
 </a>
 
 ## 一、项目描述
