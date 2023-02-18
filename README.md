@@ -4,12 +4,14 @@
     <img src="https://gitee.com/MTrun/go-view/raw/master/readme/logo-t-y.png" alt="go-view" />
 </p>
 
-#### 长期赞助商
+**长期赞助商**
+
 <div align="center">
     <a href="http://www.ccflow.org/?from=goviewGitee" target="_blank">
         <img src="https://gitee.com/dromara/go-view/raw/master/readme/sponsors/ccflow-banner.png" alt="go-view" style="width: 320px!important;" width="320px!important;" />
     </a>
 </div>
+
 ## 一、项目描述
 
 - 一个基于 Vue、Datav、Echart 框架的 " **数据大屏项目** "，通过 Vue 组件实现数据动态刷新渲染，内部图表可实现自由替换。部分图表使用 DataV 自带组件，可进行更改，详情请点击下方 DataV 文档。
