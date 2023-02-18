@@ -7,7 +7,7 @@
 **长期赞助商**
 
 <div align="center">
-    <a href="http://www.ccflow.org/?from=goviewGitee" target="_blank">
+    <a href="http://www.ccflow.org/?from=vueBigScreenGitee" target="_blank">
         <img src="https://gitee.com/dromara/go-view/raw/master/readme/sponsors/ccflow-banner.png" alt="go-view" style="width: 320px!important;" width="320px!important;" />
     </a>
 </div>
