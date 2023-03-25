@@ -215,6 +215,6 @@ QQ群二维码：
     ![输入图片说明](public/other_image.png)
 2. （重写结构，支持响应式布局）https://gitee.com/BigCatHome/koi-screen
     ![输入图片说明](public/other_image2.png)
-## 五、七、其余
+## 七、其余
 
 这个项目是个人的作品，难免会有问题和 BUG，如果有问题请进行评论，我也会尽力去更新，自己也在前端学习的路上，欢迎交流，非常感谢！
