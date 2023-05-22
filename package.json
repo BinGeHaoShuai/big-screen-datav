@@ -1,6 +1,6 @@
 {
-  "name": "big-screen-vue-datav",
-  "version": "1.5.1",
+  "name": "big-screen-datav",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -11,11 +11,13 @@
     "@jiaminghi/data-view": "^2.7.3",
     "@types/echarts": "^4.4.3",
     "core-js": "^3.6.4",
-    "echarts": "^4.6.0",
+    "echarts": "^5.4.2",
     "vue": "^2.6.11",
     "vue-awesome": "^4.0.2",
+    "vue-baidu-map": "^0.21.22",
     "vue-router": "^3.1.5",
-    "vuex": "^3.1.2"
+    "vuex": "^3.1.2",
+    "webpack": "4"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.2.0",

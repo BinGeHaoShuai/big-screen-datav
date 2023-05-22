@@ -30,7 +30,7 @@
     },
     "symbolSize": "6",
     "symbol": "emptyCircle",
-    "smooth": true
+    "smooth": false
   },
   "radar": {
     "itemStyle": {
