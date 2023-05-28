@@ -39,7 +39,9 @@
 
 ### 启动项目
 
-pnpm run serve
+`pnpm install`
+
+`pnpm run serve`
 
 ### 封装组件渲染图表
 
