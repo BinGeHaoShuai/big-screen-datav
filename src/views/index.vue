@@ -28,21 +28,43 @@
         <!-- 导航栏 -->
         <div class="d-flex jc-between px-2">
           <div class="d-flex aside-width">
-            <div class="react-left ml-4 react-l-s">
-              <span class="react-left"></span>
-              <router-link to="/traffic"><span class="text">交通情况</span></router-link>
+            <div
+              class="react-left ml-4 react-l-s"
+              :class="{ bgc: tabbarIndex == 0 }"
+            >
+              <span
+                class="react-left"
+                :class="{ bgc: tabbarIndex == 0 }"
+              ></span>
+              <router-link to="/traffic"
+                ><span class="text" @click="changeTabbarIndex(0)"
+                  >交通情况</span
+                ></router-link
+              >
             </div>
-            <div class="react-left ml-3">
-              <router-link to="/population"><span class="text">城市人口</span></router-link>
+            <div class="react-left ml-3" :class="{ bgc: tabbarIndex == 1 }">
+              <router-link to="/population"
+                ><span class="text" @click="changeTabbarIndex(1)"
+                  >城市人口</span
+                ></router-link
+              >
             </div>
-            <div class="react-left ml-3">
-              <router-link to="/environment"><span class="text">环境生态</span></router-link>
+            <div class="react-left ml-3" :class="{ bgc: tabbarIndex == 2 }">
+              <router-link to="/environment"
+                ><span class="text" @click="changeTabbarIndex(2)"
+                  >环境生态</span
+                ></router-link
+              >
             </div>
           </div>
           <div class="d-flex aside-width">
-             <!-- bg-color-blue -->
-            <div class="react-right mr-3">
-              <router-link to="/economy"><span class="text fw-b">城市经济</span></router-link>
+            <!-- bg-color-blue -->
+            <div class="react-right mr-3" :class="{ bgc: tabbarIndex == 3 }">
+              <router-link to="/economy"
+                ><span class="text fw-b" @click="changeTabbarIndex(3)"
+                  >城市经济</span
+                ></router-link
+              >
             </div>
             <div class="react-right mr-4 react-l-s">
               <span class="react-after"></span>
@@ -64,13 +86,6 @@
 <script>
 import drawMixin from "../utils/drawMixin";
 import { formatTime } from "../utils/index.js";
-// import bottomLeft from "./bottomLeft";
-// import bottomRight from "./bottomRight";
-// import center from "./center";
-// import centerLeft1 from "./centerLeft1";
-// import centerLeft2 from "./centerLeft2";
-// import centerRight1 from "./centerRight1";
-// import centerRight2 from "./centerRight2";
 
 export default {
   mixins: [drawMixin],
@@ -83,17 +98,10 @@ export default {
       dateWeek: null,
       weekday: ["周日", "周一", "周二", "周三", "周四", "周五", "周六"],
       decorationColor: ["#568aea", "#000000"],
+      tabbarIndex: 0,
     };
   },
-  components: {
-    // centerLeft1,
-    // centerLeft2,
-    // centerRight1,
-    // centerRight2,
-    // center,
-    // bottomLeft,
-    // bottomRight,
-  },
+  components: {},
   mounted() {
     this.timeFn();
     this.cancelLoading();
@@ -114,16 +122,22 @@ export default {
         this.loading = false;
       }, 500);
     },
+    changeTabbarIndex(index) {
+      this.tabbarIndex = index;
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
 @import "../assets/scss/index.scss";
-.bgc{
-  background-color: #1a5cd7!important;
+.mr-3 {
+  background-color: #0f1325;
 }
-.text{
+.bgc {
+  background-color: #1a5cd7 !important;
+}
+.text {
   color: #fff;
 }
 </style>
