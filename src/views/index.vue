@@ -58,7 +58,6 @@
             </div>
           </div>
           <div class="d-flex aside-width">
-            <!-- bg-color-blue -->
             <div class="react-right mr-3" :class="{ bgc: tabbarIndex == 3 }">
               <router-link to="/economy"
                 ><span class="text fw-b" @click="changeTabbarIndex(3)"
