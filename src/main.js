@@ -27,7 +27,8 @@ Vue.config.productionTip = false;
 // 全局注册
 Vue.component('icon', Icon);
 Vue.use(dataV);
-Vue.use(BaiduMap, { ak: 'qWegMGVpX6v5EYF5beToN970MxC6OIC7' })
+//申请百度地图key
+Vue.use(BaiduMap, { ak: '' })
 new Vue({
   router,
   store,
