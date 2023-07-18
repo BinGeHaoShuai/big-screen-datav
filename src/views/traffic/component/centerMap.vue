@@ -7,7 +7,13 @@
       @ready="handler"
       :mapStyle="mapStyle"
       :scroll-wheel-zoom="true"
-    />
+    >
+      <bm-marker
+        v-for="(item, index) of markerPoints"
+        :position="item"
+        :key="index"
+      ></bm-marker>
+    </baidu-map>
   </div>
 </template>
 
@@ -22,6 +28,11 @@ export default {
       mapStyle: {
         styleJson: mapStyle,
       },
+      markerPoints: [
+        { lng: 106.505, lat: 29.5332 },
+        { lng: 106.51, lat: 29.5332 },
+        { lng: 106.524, lat: 29.53 },
+      ],
     };
   },
   created() {},
